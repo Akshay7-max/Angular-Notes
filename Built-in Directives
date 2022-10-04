@@ -1,0 +1,38 @@
+Basic -:
+**********************
+***//app.component.ts//***
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'project2';
+
+  marks:number = 70;
+  mycolor:string = "";
+
+  constructor() {
+    if(this.marks>=35){
+      this.mycolor = "teal";
+    }else{
+      this.mycolor = "deeppink";
+    }
+  }
+}
+
+
+***//app.component.html//***
+<div>
+    <h4>Built In Directive</h4>
+    <h1 [style.color]="mycolor">{{marks}}</h1>
+</div>
+
+
+
+ngClass -:
+**********************
+***//app.component.ts//***
