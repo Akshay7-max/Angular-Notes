@@ -1,0 +1,48 @@
+ngSwitch -:
+**********************
+***//app.component.ts//***
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'project2';
+
+  country:string = "";
+  }
+}
+
+
+***//app.component.html//***
+<div>
+  <h4>ngSwitch</h4>
+
+  <select [(ngModel)]="country">
+    <option>India</option>
+    <option>USA</option>
+    <option>UK</option>
+  </select>
+
+  <div [ngSwitch]="country">
+    <p *ngSwitchCase="'India'">
+      India Details Here
+    </p>
+
+    <p *ngSwitchCase="'USA'">
+      USA Details Here
+    </p>
+
+    <p *ngSwitchCase="'UK'">
+      UK Details Here
+    </p>
+
+    <P *ngSwitchDefault>
+      Please select any country
+    </P>
+  </div>
+
+</div>
