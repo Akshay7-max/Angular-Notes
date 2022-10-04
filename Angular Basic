@@ -4,7 +4,7 @@ For create any project
 For run project
 >ng serve 
 
-src -: index.html
+src -: index.html [<app-root></app-root>]
       main.ts
       style.css
  
