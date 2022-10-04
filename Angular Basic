@@ -13,3 +13,29 @@ src -: app -: app.component.html
               app.component.ts
               app.module.ts
               app.component.spec.ts
+
+For creating component -:
+ng g component IndiaComp
+
+For creating module -:
+ng g module IndiaMod
+
+For creating class -:
+ng g class India
+
+For creating service -:
+ng g service India
+
+put service inside providers -: app.module.ts
+put pipe inside NgModule -: app.module.ts
+For class no need to mention inside app.module.ts
+
+
+Data Types -:
+  firstname: string = "Akshay";
+  lastname: string = "Kumbhare";
+  age: number = 27;
+  receivenewsletters: boolean = true;
+  gender: string = "Male";
+  country: string = "India";
+  address: string = "http://www.facebook.com";
