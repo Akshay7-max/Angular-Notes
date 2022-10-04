@@ -1,0 +1,44 @@
+ngIf and else -:
+**********************
+***//app.component.ts//***
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'project2';
+
+  marks:number = 70;
+  b:boolean;
+
+  constructor() {
+    if(this.marks>=35){
+      this.b = true;
+    }else{
+      this.b = false;
+    }
+  }
+}
+
+
+***//app.component.html//***
+<div>
+  <h4>ngIf and else</h4>
+  <div *ngIf="b then template1; else template2"></div>
+
+  <ng-template #template1>
+    <div style="background-color:rgb(8, 167, 170)">
+      Congrulations
+    </div>
+  </ng-template>
+
+  <ng-template #template2>
+    <div style="background-color:deeppink">
+      Better Luck Next Time
+    </div>
+  </ng-template>
+</div>
