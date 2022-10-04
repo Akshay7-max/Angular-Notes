@@ -39,5 +39,6 @@ Data Types -:
   gender: string = "Male";
   country: string = "India";
   address: string = "http://www.facebook.com";
-  person:object = {firstname:"Ram", lastname:"Adam", age:21, post:"Manager"};
-  dt:Date = new Date();
+  dt: Date = new Date();
+  person: object = {firstname:"Ram", lastname:"Adam", age:21, post:"Manager"};
+  
