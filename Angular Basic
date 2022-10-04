@@ -1,0 +1,15 @@
+For create any project
+>ng new project  
+
+For run project
+>ng serve 
+
+src -: index.html
+      main.ts
+      style.css
+ 
+src -: app -: app.component.html
+              app.component.css
+              app.component.ts
+              app.module.ts
+              app.component.spec.ts
