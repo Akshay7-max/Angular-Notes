@@ -1,0 +1,82 @@
+ngFor with Add, Remove -:
+**********************
+>ng g class Employee
+
+***\\app.component.ts\\***
+
+import { Component } from '@angular/core';
+import { Employee } from "./employee";
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'project2';
+
+  employees: Employee[] = [
+    new Employee(1, "Ram", 4000),
+    new Employee(2, "Shyam", 5000),
+    new Employee(3, "Krishna", 6000),
+    new Employee(4, "Hari", 7000)
+  ];
+
+  newemployee:Employee = new Employee(null, null, null);
+
+  onInsertClick() {
+    this.employees.push(new Employee(this.newemployee.empid, this.newemployee.empname, this.newemployee.salary));
+
+    this.newemployee.empid = null;
+    this.newemployee.empname = null;
+    this.newemployee.salary = null;
+  }
+
+  onDeleteClick(n:any) {
+    if (confirm("Are you sure to delete this employee?")) {
+      this.employees.splice(n, 1);
+    }
+  }
+}
+
+
+***\\src\app\app.employee.ts\\***
+
+export class Employee {
+    empid:number | null;
+    empname:string | null;
+    salary:number | null;
+
+    constructor(a:any,b:any,c:any){
+        this.empid = a;
+        this.empname = b;
+        this.salary = c;
+    }
+}
+
+
+***\\app.component.html\\***
+<div>
+  <h4>ngFor with Add, Remove</h4>
+
+  <table border="1">
+    <tr>
+      <th>Emp Id</th>
+      <th>Emp Name</th>
+      <th>Salary</th>
+    </tr>
+
+    <tr *ngFor="let employee of employees; let i=index">
+      <td>{{employee.empid}}</td>
+      <td>{{employee.empname}}</td>
+      <td>{{employee.salary}}</td>
+      <td><input type="button" value="Delete" (click)="onDeleteClick(i)"></td>
+    </tr>
+    <tr>
+      <td><input type="text" [(ngModel)]="newemployee.empid" placeholder="Emp Id"></td>
+      <td><input type="text" [(ngModel)]="newemployee.empname" placeholder="Emp Name"></td>
+      <td><input type="text" [(ngModel)]="newemployee.salary" placeholder="Salary"></td>
+      <td><input type="button" value="Insert" (click)="onInsertClick()"></td>
+    </tr>
+  </table>
+</div>
