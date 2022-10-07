@@ -1,0 +1,5 @@
+Add the Bootstrap framework to an application (CSS framework used to make cool/intuitive User Interface and look/feel)
+Download bootstrap css to local machine from bootstrap website: https://getbootstrap.com/docs/4.1/getting-started/download/ into folder assets/library/bootstrap.min.css
+Include bootstrap in application - index.html under head tag - <link rel="stylesheet" href="./assets/library/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+or you can include a CDN path in index.html under head tag
+or else you can install bootstrap with npm command: npm install bootstrap and use it
