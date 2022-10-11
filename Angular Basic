@@ -5,8 +5,8 @@ For run project
 >ng serve 
 
 src -: index.html [<app-root></app-root>]
-      main.ts
-      style.css
+       main.ts
+       style.css
  
 src -: app -: app.component.html
               app.component.css
@@ -30,6 +30,11 @@ put service inside providers -: app.module.ts
 put pipe inside NgModule -: app.module.ts
 For class no need to mention inside app.module.ts
 
+for class no import
+declarations: [] component & pipe
+imports: [] module
+providers: [] service
+bootstrap: []
 
 Data Types -:
   firstname: string = "Akshay";
