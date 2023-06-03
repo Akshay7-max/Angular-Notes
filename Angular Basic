@@ -1,7 +1,7 @@
-For create any project
+For create any project -:
 >ng new project  
 
-For run project
+For run project -:
 >ng serve 
 
 src -: index.html [<app-root></app-root>]
