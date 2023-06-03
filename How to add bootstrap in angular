@@ -7,5 +7,5 @@ Include bootstrap in application - index.html under head tag -
 
 or you can include a CDN path in index.html under head tag
 
-or else you can install bootstrap with npm command: npm install bootstrap and use it
+or else you can install bootstrap with npm command: npm install bootstrap and use it.
 
